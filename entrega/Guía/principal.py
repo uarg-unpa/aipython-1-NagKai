@@ -1,0 +1,6 @@
+print("Taller de AIPython P1 E2")
+print()
+print("hola","soy","Juan")
+print("ya", "estoy","en","casa", sep="*",end=".")
+print("Dim")
+print("yogurt")
