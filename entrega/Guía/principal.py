@@ -35,3 +35,25 @@ print(texto.lower())
 print(texto.replace(" ","-"))
 print(len(texto))
 print(len('AIPython'))
+#while
+num=int(input("ingresar número"))
+positivo=0
+negativo=0
+while(num!=0):
+    if num>0:
+        positivo=positivo+1
+    else:
+        negativo=negativo+1
+    num=int(input("ingresar número"))
+print(f"la cantidad de números positivos es {positivo} y la cantidad de npumeros negativos es {negativo}")
+#
+#for
+cadena=("AIPYTHON")
+for letra in cadena:
+    print(letra)
+#range
+for number in range(11):
+    print(number)
+#imprimir AIPYTHON 10 veces
+for _ in range(10):
+    print("AIPYTHON")
