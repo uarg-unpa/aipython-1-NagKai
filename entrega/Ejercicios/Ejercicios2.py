@@ -5,13 +5,20 @@ else:
     print("no tiene edad para conducir")
 #
 edad=int(input("Ingrese su edad: "))
-if edad==40:
+mi_edad=int(input("Ingrese mi edad: "))
+if edad==mi_edad:
     print("yayy, tenemos la misma edad!")
 else:
-    if edad==39 or edad==41:
-        print("Año")
+    if edad<mi_edad:
+        if edad==mi_edad-1:
+            print("Usted es menor por 1 año")
+        else:
+            print(f"Usted es menor que yo por {mi_edad-edad} años")
     else:
-        print("Años")
+        if edad==mi_edad+1:
+            print("Usted es mayor por 1 año")
+        else:
+            print(f"Usted es mayor que yo por {edad-mi_edad} años")
 #
 Saved_Contra=("SALSA")
 contraseña=input("ingrese su contraseña: ")
@@ -23,9 +30,9 @@ else:
 #
 numA=float(input("ingrese el número A: "))
 numB=float(input("ingrese el número B: "))
-if A==B:
+if numA==numB:
     print("A es igual a B")
-elif A>B:
+elif numA>numB:
     print("A es mayor a B")
 else:
     print("A es menor a B")
@@ -57,7 +64,7 @@ elif dia==7:
 puntuacion=int(input("Ingrese la puntuacion del alumno"))
 if puntuacion>=90:
     print("A")
-elif puntuacion>=70:
+elif puntuacion>=80:
     print("B")
 elif puntuacion>=60:
     print("C")
@@ -66,3 +73,12 @@ elif puntuacion>=50:
 else:
     print("F")
 #
+
+#
+userage=int(input("ingrese su edad"))
+ing_men=int(input("ingrese sus ingresos mensuales"))
+if userage >= 18:
+    if ing_men >=100000:
+        print("usted debe pagar el impuesto")
+else:
+    print("usted no debe pagar el impuesto")
