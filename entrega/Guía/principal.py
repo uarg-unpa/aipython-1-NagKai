@@ -44,7 +44,7 @@ while(num!=0):
         positivo=positivo+1
     else:
         negativo=negativo+1
-    num=int(input("ingresar número"))
+    num=int(input("ingresar número: "))
 print(f"la cantidad de números positivos es {positivo} y la cantidad de npumeros negativos es {negativo}")
 #
 #for
@@ -57,4 +57,30 @@ for number in range(11):
 #imprimir AIPYTHON 10 veces
 for _ in range(10):
     print("AIPYTHON")
-#
+# LISTAS
+#Creación listas vacías
+nombres=[]
+#Valores iniciales
+nombres=['franco','fernanda','fabiana']
+#mostrar lista
+print(nombres)
+#iterar sobre las listas usando índices
+for Q in range(len(nombres)):
+    print(nombres[Q])
+#accedemos a los elementos
+primer_elemento=nombres[0]
+print(f"el primer elemento es {primer_elemento}")
+#creación de listas usando metodos
+#nombres=list()
+#nombres=list('gaston','eva','lautaro')
+#Append agrega un elemento al final de la lista
+nombres.append('sandra')
+#insert
+nombres.insert(0,'victoria')
+#utilizar el operador in
+for nombre in nombres:
+    print(nombre)
+#mutabilidad
+nombres[4]='Lorenza'
+for nombre in nombres:
+    print(nombres)

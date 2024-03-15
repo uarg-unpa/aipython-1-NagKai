@@ -22,7 +22,7 @@ else:
 #
 Saved_Contra=("SALSA")
 contraseña=input("ingrese su contraseña: ")
-contraseña=(contraseña.upper)
+contraseña=(contraseña.upper())
 if Saved_Contra==contraseña:
     print("la contraseña coincide con la contraseña guardada")
 else:
@@ -33,9 +33,9 @@ numB=float(input("ingrese el número B: "))
 if numA==numB:
     print("A es igual a B")
 elif numA>numB:
-    print("A es mayor a B")
+    print("A es mayor que B")
 else:
-    print("A es menor a B")
+    print("A es menor que B")
 #
 num=int(input("Ingrese el número: "))
 if num%2!=0:
@@ -43,7 +43,7 @@ if num%2!=0:
 else:
     print("el número es par")
 #
-dia=int(input("ingrese un número del 1 al 7"))
+dia=int(input("ingrese un número del 1 al 7: "))
 if dia<1 or dia>7:
     print("error, ese número no está entre 1 y 7")
 elif dia==1:
@@ -61,7 +61,7 @@ elif dia==6:
 elif dia==7:
     print(f"el número {dia} corresponde al día Domingo")
 #
-puntuacion=int(input("Ingrese la puntuacion del alumno"))
+puntuacion=int(input("Ingrese la puntuacion del alumno: "))
 if puntuacion>=90:
     print("A")
 elif puntuacion>=80:
@@ -73,10 +73,16 @@ elif puntuacion>=50:
 else:
     print("F")
 #
-
+edad_cliente=int(input("Ingrese su edad: "))
+if edad_cliente < 4:
+    print("puede entrar gratis")
+elif edad_cliente >= 4 and edad_cliente<=18:
+    print("debe pagar $5 para entrar")
+else:
+    print("debe pagar $10 para entrar")
 #
-userage=int(input("ingrese su edad"))
-ing_men=int(input("ingrese sus ingresos mensuales"))
+userage=int(input("ingrese su edad: "))
+ing_men=int(input("ingrese sus ingresos mensuales: "))
 if userage >= 18:
     if ing_men >=100000:
         print("usted debe pagar el impuesto")
