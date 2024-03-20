@@ -43,3 +43,9 @@ def gnirts(palabra="palabra"):
 #llamado de función
 gnirts()
 #9
+
+#10
+def far_cel(temp_far=0):
+    print(f"su temperatura de fahrenheit en celsius es {(temp_far-32)*0.5556}°C")
+#llamado de función
+far_cel()
