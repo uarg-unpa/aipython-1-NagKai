@@ -4,12 +4,6 @@
 #Obtener resultados individuales y totales
 #Ver estadísticas básicas de los lanzamientos
 import random
-#def cant_dados (dados=1):
-#    dados=int(input("ingrese la cantidad de dados que quiere tirar: "))
-#def cara_dados (caras=6):
-#    caras=int(input("ingrese la cantidad de caras que deban tener los dados: "))
-#def cant_lanzamientos (lanzamientos=1):
-#    lanzamientos=int(input("ingrese la cantidad de lanzamientos que quiere hacer: "))
 def lanzar_dado(cant_caras):
      return random.randint(1, cant_caras)
 
@@ -25,11 +19,36 @@ def lanzar_dado(cant_caras):
 #se guardan el promedio y la suma de cada lanzamiento, y se muestran como "estadísticas" después de terminar los lanzamientos
 
 cant_dados=int(input("ingrese la cantidad de dados que va a lanzar: "))
-cant_caras=int(input("ingrese la  cantidad de caras que deban tener los dados: "))
+cant_caras=int(input("ingrese la cantidad de caras que deban tener los dados: "))
 cant_lanzamientos=int(input("ingrese la cantidad de lanzamientos que quiere hacer: "))
 lista_valor_dados=[]
-for i in range(1,cant_dados):
-    valor=(lanzar_dado) #no está funcionando
-    lista_valor_dados.append(valor)
-    print(lista_valor_dados[i-1])
-    print(f"El valor del dado ",i, "es: ",valor)
+lista_promedios=[]
+lista_sumas=[]
+for l in range(0, cant_lanzamientos):
+     suma_dados=0
+     promedio_actual=0
+     print(f"Lanzamiento ", l+1,":",sep="")
+     print(" ")
+     for i in range(0,cant_dados):
+          valor=(lanzar_dado(cant_caras))
+          lista_valor_dados.append(valor)
+          print(f"El valor del dado ",i+1, "es: ",valor)
+          suma_dados=suma_dados+valor
+     print(f"La suma de todos los dados lanzados es: ", suma_dados)
+     promedio_actual=suma_dados/cant_dados
+     print(f"El resultado promedio de todos los dados lanzados es: ", promedio_actual)
+     print()
+     lista_sumas.append(suma_dados)
+     lista_promedios.append(promedio_actual)
+print("ESTADISTICAS:")
+print("")
+print(f"Cantidad de lanzamientos: ",cant_lanzamientos)
+print(f"Cantidad de dados por lanzamiento: ",cant_dados)
+print(f"Cantidad de caras de los dados: ",cant_caras)
+print("")
+print("SUMA DE CADA LANZAMIENTO:")
+for s in range(0,cant_lanzamientos):
+     print(f"Lanzamiento ", s+1,": ",lista_sumas[s],sep="")
+print("PROMEDIO DE CADA LANZAMIENTO:")
+for p in range(0,cant_lanzamientos):
+     print(f"Lanzamiento ", p+1,": ",lista_promedios[p],sep="")
